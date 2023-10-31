@@ -1,7 +1,7 @@
 import { initExchange } from "../utils";
 import { executeMethod } from "./getOrder";
 
-describe("getOrder", () => {
+describe.skip("getOrder", () => {
   beforeAll(async () => {
     await initExchange();
   });

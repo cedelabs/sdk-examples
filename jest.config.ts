@@ -22,7 +22,7 @@ export default {
     ],
   },
   globals: {
-    "@cedelabs/sdk": {
+    "@cedelabs/sdk-demo": {
       useESM: true,
     },
   },

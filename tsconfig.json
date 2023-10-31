@@ -18,9 +18,5 @@
     "experimentalSpecifierResolution": "node",
     "transpileOnly": true
   },
-  "references": [
-    { "path": "../../core/types" },
-    { "path": "../../core/utils" }
-  ],
   "exclude": ["../../node_modules", "dist"]
 }

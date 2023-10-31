@@ -9,6 +9,12 @@ describe("getDepositAddress", () => {
   it("it should return deposit address", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "address": "0x0_DEMO_ADDRESS",
+        "network": "ETH",
+        "tokenSymbol": "ETH",
+      }
+    `);
   });
 });

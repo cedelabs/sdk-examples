@@ -1,4 +1,3 @@
-import { OrderType } from "@cede/types";
 import { cedeSDK, initExchange } from "../utils";
 
 export const executeMethod = async () => {
@@ -10,7 +9,7 @@ export const executeMethod = async () => {
   const data = await createOrder({
     exchangeInstanceId,
     pairSymbol: "ETH/USDT",
-    orderType: OrderType.MARKET,
+    orderType: "market",
     orderSide: "buy",
     amount: "0.1",
     price: "0.1",

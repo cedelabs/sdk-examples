@@ -9,6 +9,6 @@ describe("prepareWithdrawal", () => {
   it("it should prepare withdrawal", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`undefined`);
   });
 });

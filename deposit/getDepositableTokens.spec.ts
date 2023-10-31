@@ -9,6 +9,33 @@ describe("getDepositableTokens", () => {
   it("it should return depositable tokens", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`
+      [
+        {
+          "networks": [
+            {
+              "chainId": 1,
+              "depositEnabled": true,
+              "name": "Ethereum",
+              "network": "Ethereum",
+              "withdrawalEnabled": true,
+            },
+          ],
+          "tokenSymbol": "ETH",
+        },
+        {
+          "networks": [
+            {
+              "chainId": 137,
+              "depositEnabled": true,
+              "name": "Polygon",
+              "network": "Polygon",
+              "withdrawalEnabled": true,
+            },
+          ],
+          "tokenSymbol": "MATIC",
+        },
+      ]
+    `);
   });
 });

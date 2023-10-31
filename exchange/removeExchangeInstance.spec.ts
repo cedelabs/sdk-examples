@@ -9,6 +9,6 @@ describe("removeExchangeInstance", () => {
   it("it should remove exchange instance", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`undefined`);
   });
 });

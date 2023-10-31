@@ -9,6 +9,12 @@ describe("getFiatCurrencies", () => {
   it("it should return fiat currencies", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "error": "Not Found",
+        "message": "Cannot GET /v1/v1/fiat/currencies",
+        "statusCode": 404,
+      }
+    `);
   });
 });

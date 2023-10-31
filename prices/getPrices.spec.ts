@@ -9,6 +9,6 @@ describe("getPrices", () => {
   it("it should return token prices", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`{}`);
   });
 });
