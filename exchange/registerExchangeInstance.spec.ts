@@ -11,7 +11,7 @@ describe("registerExchangeInstance", () => {
 
     expect(result).toMatchInlineSnapshot(`
       {
-        "exchangeInstanceId": "133271-623848-295882-498157-147268",
+        "exchangeInstanceId": "659352-584531-220959-264632-416184",
       }
     `);
   });

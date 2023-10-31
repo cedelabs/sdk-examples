@@ -126,7 +126,7 @@ describe("getBalances", () => {
           },
         },
         "hydrate": false,
-        "key": "PortfolioServiceMock-660450-211321-340329-997426-833220-",
+        "key": "PortfolioServiceMock-841421-975506-893651-358789-878870-",
       }
     `);
   });

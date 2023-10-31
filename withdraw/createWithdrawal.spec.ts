@@ -14,7 +14,7 @@ describe("createWithdrawal", () => {
         "from": {
           "exchangeAccount": {
             "exchangeId": "bitfinex",
-            "exchangeInstanceId": "224733-283220-103608-518205-136531",
+            "exchangeInstanceId": "778115-811829-649110-196125-290862",
           },
           "transaction": {
             "amount": 12,
@@ -23,9 +23,9 @@ describe("createWithdrawal", () => {
               "tokenSymbol": "USDT",
             },
             "status": "ok",
-            "timestamp": 1698779452875,
+            "timestamp": 1698781449796,
             "tokenSymbol": "USDT",
-            "transactionId": "353337180071",
+            "transactionId": "1521877522438",
           },
           "wallet": {
             "depositAddress": "0x0_DEMO_ADDRESS",
@@ -44,9 +44,9 @@ describe("createWithdrawal", () => {
               "tokenSymbol": "USDT",
             },
             "status": "ok",
-            "timestamp": 1698779452875,
+            "timestamp": 1698781449796,
             "tokenSymbol": "USDT",
-            "transactionId": "84993205205",
+            "transactionId": "1155864994358",
           },
           "wallet": {
             "depositAddress": "0xundefined",

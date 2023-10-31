@@ -17,12 +17,12 @@ describe("createOrder", () => {
           "tokenSymbol": "ETH",
         },
         "filled": 0.1,
-        "id": "1196552383044",
+        "id": "777326456345",
         "pairSymbol": "ETH/USDT",
         "price": 0.1,
         "side": "buy",
         "status": "open",
-        "timestamp": 1698779452466,
+        "timestamp": 1698781449596,
         "type": "market",
       }
     `);
