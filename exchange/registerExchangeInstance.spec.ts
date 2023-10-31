@@ -9,10 +9,8 @@ describe("registerExchangeInstance", () => {
   it("it should return exchange instance id", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot(`
-      {
-        "exchangeInstanceId": "659352-584531-220959-264632-416184",
-      }
-    `);
+    expect(result).toMatchSnapshot({
+      exchangeInstanceId: expect.any(String),
+    });
   });
 });

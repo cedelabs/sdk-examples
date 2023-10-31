@@ -1,5 +1,5 @@
 import { exchanges } from "./exchange";
-import CedeSDK from "@cedelabs/sdk-demo";
+import CedeSDK from "@cedelabs/sdk";
 
 const { CEDE_MODE, SELECTED_EXCHANGE } = process.env;
 

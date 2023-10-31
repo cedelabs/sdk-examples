@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "execute": "ts-node -r dotenv/config ./execute -- ",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --passWithNoTests"
+    "test:node": "NODE_OPTIONS=--experimental-vm-modules TEST_ENV=node jest --passWithNoTests",
+    "test:dom": "NODE_OPTIONS=--experimental-vm-modules TEST_ENV=jsdom jest --passWithNoTests"
   },
   "type": "module",
   "devDependencies": {
-    "@cedelabs/sdk-demo": "1.1.1",
+    "@cedelabs/sdk": "../monorepo/core/sdk",
     "@testing-library/jest-dom": "^6.1.3",
     "@types/jest": "^29.5.7",
     "@typescript-eslint/eslint-plugin": "^5.36.1",

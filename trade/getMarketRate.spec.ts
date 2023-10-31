@@ -9,6 +9,11 @@ describe("getMarketRate", () => {
   it("it should return market rate", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "ask": "1638.3047911131491",
+        "bid": "1638.3047911131491",
+      }
+    `);
   });
 });

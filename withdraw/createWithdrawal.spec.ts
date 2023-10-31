@@ -9,12 +9,58 @@ describe("createWithdrawal", () => {
   it("it should create withdrawal", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot(`
+    expect(result).toMatchInlineSnapshot(
+      {
+        from: {
+          exchangeAccount: {
+            exchangeId: "bitfinex",
+            exchangeInstanceId: expect.any(String),
+          },
+          transaction: {
+            amount: 12,
+            fee: {
+              amount: 1,
+              tokenSymbol: "USDT",
+            },
+            status: "ok",
+            timestamp: expect.any(Number),
+            tokenSymbol: "USDT",
+            transactionId: expect.any(String),
+          },
+          wallet: {
+            depositAddress: "0x0_DEMO_ADDRESS",
+            walletType: "spot",
+          },
+        },
+        to: {
+          account: {
+            address: "0x123456789",
+            network: "ETH",
+          },
+          transaction: {
+            amount: 12,
+            fee: {
+              amount: 1,
+              tokenSymbol: "USDT",
+            },
+            status: "ok",
+            timestamp: expect.any(Number),
+            tokenSymbol: "USDT",
+            transactionId: expect.any(String),
+          },
+          wallet: {
+            depositAddress: "0xundefined",
+            walletType: "spot",
+          },
+        },
+        type: "withdrawal",
+      },
+      `
       {
         "from": {
           "exchangeAccount": {
             "exchangeId": "bitfinex",
-            "exchangeInstanceId": "778115-811829-649110-196125-290862",
+            "exchangeInstanceId": Any<String>,
           },
           "transaction": {
             "amount": 12,
@@ -23,9 +69,9 @@ describe("createWithdrawal", () => {
               "tokenSymbol": "USDT",
             },
             "status": "ok",
-            "timestamp": 1698781449796,
+            "timestamp": Any<Number>,
             "tokenSymbol": "USDT",
-            "transactionId": "1521877522438",
+            "transactionId": Any<String>,
           },
           "wallet": {
             "depositAddress": "0x0_DEMO_ADDRESS",
@@ -44,9 +90,9 @@ describe("createWithdrawal", () => {
               "tokenSymbol": "USDT",
             },
             "status": "ok",
-            "timestamp": 1698781449796,
+            "timestamp": Any<Number>,
             "tokenSymbol": "USDT",
-            "transactionId": "1155864994358",
+            "transactionId": Any<String>,
           },
           "wallet": {
             "depositAddress": "0xundefined",
@@ -55,6 +101,7 @@ describe("createWithdrawal", () => {
         },
         "type": "withdrawal",
       }
-    `);
+    `
+    );
   });
 });

@@ -9,6 +9,21 @@ describe("prepareOrder", () => {
   it("it should prepare order", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot();
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "createOrderRequest": {
+          "amount": "0.1",
+          "orderSide": "buy",
+          "orderType": "market",
+          "pairSymbol": "ETH/USDT",
+          "price": "0.1",
+        },
+        "estimatedAmount": "0.1",
+        "estimatedFee": {
+          "amount": 0,
+          "tokenSymbol": "ETH",
+        },
+      }
+    `);
   });
 });

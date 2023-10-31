@@ -10,11 +10,23 @@ describe("getFiatCurrencies", () => {
     const result = await executeMethod();
 
     expect(result).toMatchInlineSnapshot(`
-      {
-        "error": "Not Found",
-        "message": "Cannot GET /v1/v1/fiat/currencies",
-        "statusCode": 404,
-      }
+      [
+        {
+          "name": "United States Dollar",
+          "symbol": "USD",
+          "symbolNative": "$",
+        },
+        {
+          "name": "Euro",
+          "symbol": "EUR",
+          "symbolNative": "€",
+        },
+        {
+          "name": "British Pound Sterling",
+          "symbol": "GBP",
+          "symbolNative": "£",
+        },
+      ]
     `);
   });
 });

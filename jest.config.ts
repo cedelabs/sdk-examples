@@ -5,6 +5,7 @@
  * Written by CEDE Labs team <team@cedelabs.io>, September 2021
  */
 
+console.log(process.env.TEST_ENV);
 export default {
   preset: "ts-jest",
   extensionsToTreatAsEsm: [".ts"],
@@ -12,7 +13,7 @@ export default {
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
-  testEnvironment: "node",
+  testEnvironment: process.env.TEST_ENV ?? "node",
   transform: {
     "\\.[jt]sx?$": [
       "ts-jest",
