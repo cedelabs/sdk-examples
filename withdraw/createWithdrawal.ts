@@ -2,8 +2,7 @@ import { cedeSDK, initExchange } from "../utils";
 
 export const executeMethod = async (customExchangeInstanceId?: string) => {
   const fromExchangeInstanceId = customExchangeInstanceId ?? await initExchange();
-  const { api } = cedeSDK;
-  const { createWithdrawal } = api;
+  const { createWithdrawal } = cedeSDK.api;
 
   const data = await createWithdrawal({
     fromExchangeInstanceId,

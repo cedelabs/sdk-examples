@@ -1,8 +1,7 @@
 import { cedeSDK } from "../utils";
 
 export const executeMethod = async () => {
-  const { api } = cedeSDK;
-  const { getSupportedExchanges } = api;
+  const { getSupportedExchanges } = cedeSDK.api;
   getSupportedExchanges;
   const url = await getSupportedExchanges();
 

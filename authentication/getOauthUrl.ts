@@ -3,8 +3,7 @@ import { cedeSDK } from "../utils";
 const { SELECTED_EXCHANGE } = process.env;
 
 export const executeMethod = async () => {
-  const { api } = cedeSDK;
-  const { getOAuthUrl } = api;
+  const { getOAuthUrl } = cedeSDK.api;
 
   const url = await getOAuthUrl({
     exchangeId: SELECTED_EXCHANGE ?? "",
