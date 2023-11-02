@@ -8,11 +8,13 @@ Install dependencies using yarn:
 yarn
 ```
 
-## Usage
+## Usage with a real CEX
 
 If you want to add a CEX, copy paste the `exchange.example.ts` file to the `exchange.ts` file and fill in the CEX credentials.
 
 And then change the `SELECTED_CEX` entry inside the `.env` file so every commands will run using the CEX you need.
+
+Then link the local `sdk` package with to this project.
 
 ### Commands
 
@@ -31,4 +33,4 @@ yarn execute ./deposit/getDepositabletokens
 
 ## Tests
 
-The tests actually rely on the mocked bitfinex CEX and can fail in case you change the CEX or the content of the `executeMethod` function.
+The tests actually rely on the mocked coinbase CEX using the demo package and can fail in case you change the CEX or the content of the `executeMethod` function.
