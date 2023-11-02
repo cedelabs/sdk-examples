@@ -1,11 +1,10 @@
 import { cedeSDK, initExchange } from "../utils";
 
-export const executeMethod = async () => {
-  const exchangeInstanceId = await initExchange();
+export const executeMethod = async (customExchangeInstanceId?: string) => {
+  const exchangeInstanceId = customExchangeInstanceId ?? await initExchange();
   const { api } = cedeSDK;
   const { createOrder } = api;
 
-  // @TODO: update doc
   const data = await createOrder({
     exchangeInstanceId,
     pairSymbol: "ETH/USDT",

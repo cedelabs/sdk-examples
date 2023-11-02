@@ -5,7 +5,6 @@ export const executeMethod = async () => {
   const { api } = cedeSDK;
   const { prepareOrder } = api;
 
-  // @TODO: update doc, amount is expecting string, price is required, orderType require the enum
   const data = await prepareOrder({
     exchangeInstanceId,
     pairSymbol: "ETH/USDT",

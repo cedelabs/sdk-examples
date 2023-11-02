@@ -314,10 +314,8 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cedelabs/demo-sdk@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@cedelabs/demo-sdk/-/demo-sdk-1.1.1.tgz#bd624c8644c42d59bb819d76693afb84a4c33ea1"
-  integrity sha512-MrKCt/k940Xm+HYEO2tT0cmEE3IHl+7jo/tWNhOx6maa5mjFllB2x65Nw4rH/mlFfutaIM5O1CmG8pfq1ACrdA==
+"@cedelabs/demo-sdk@../monorepo/core/sdk":
+  version "1.1.2"
   dependencies:
     async-mutex "^0.4.0"
     events "^3.3.0"

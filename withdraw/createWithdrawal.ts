@@ -5,7 +5,6 @@ export const executeMethod = async () => {
   const { api } = cedeSDK;
   const { createWithdrawal } = api;
 
-  // @TODO: update doc
   const data = await createWithdrawal({
     fromExchangeInstanceId,
     tokenSymbol: "USDT",

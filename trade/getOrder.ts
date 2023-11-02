@@ -1,12 +1,11 @@
 import { cedeSDK, initExchange } from "../utils";
 
-export const executeMethod = async () => {
-  const exchangeInstanceId = await initExchange();
+export const executeMethod = async (orderId?: string, customExchangeInstanceId?: string) => {
+  const exchangeInstanceId = customExchangeInstanceId ?? await initExchange();
   const { api } = cedeSDK;
   const { getOrder } = api;
 
-  // @TODO: update doc and order not found error
-  const data = await getOrder({ exchangeInstanceId, pairSymbol: "ETH/USDT", orderId: "13960869081" });
+  const data = await getOrder({ exchangeInstanceId, pairSymbol: "ETH/USDT", orderId: orderId ?? "13960869081" });
 
   return data;
 };

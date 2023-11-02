@@ -5,7 +5,6 @@
  * Written by CEDE Labs team <team@cedelabs.io>, September 2021
  */
 
-console.log(process.env.TEST_ENV);
 export default {
   preset: "ts-jest",
   extensionsToTreatAsEsm: [".ts"],

@@ -13,7 +13,7 @@ describe("createWithdrawal", () => {
       {
         from: {
           exchangeAccount: {
-            exchangeId: "bitfinex",
+            exchangeId: "coinbase",
             exchangeInstanceId: expect.any(String),
           },
           transaction: {
@@ -59,7 +59,7 @@ describe("createWithdrawal", () => {
       {
         "from": {
           "exchangeAccount": {
-            "exchangeId": "bitfinex",
+            "exchangeId": "coinbase",
             "exchangeInstanceId": Any<String>,
           },
           "transaction": {

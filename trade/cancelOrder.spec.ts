@@ -1,14 +1,22 @@
 import { initExchange } from "../utils";
 import { executeMethod } from "./cancelOrder";
+import { executeMethod as createOrder } from "./createOrder";
 
-describe.skip("cancelOrder", () => {
+let exchangeInstanceId: string;
+
+describe("cancelOrder", () => {
   beforeAll(async () => {
-    await initExchange();
+    exchangeInstanceId = await initExchange();
   });
 
   it("it should cancel order", async () => {
-    const result = await executeMethod();
+    const createOrderResult = await createOrder(exchangeInstanceId);
 
-    expect(result).toMatchInlineSnapshot();
+    const result = await executeMethod(
+      createOrderResult.id,
+      exchangeInstanceId
+    );
+
+    expect(result).toMatchInlineSnapshot(`"canceled"`);
   });
 });

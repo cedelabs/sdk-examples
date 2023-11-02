@@ -9,33 +9,61 @@ describe("getWithdrawableBalances", () => {
   it("it should return withdrawable balances", async () => {
     const result = await executeMethod();
 
-    expect(result).toMatchInlineSnapshot(`
+    expect(result).toMatchInlineSnapshot(
+      {
+        DOT: {
+          freeBalance: expect.any(Number),
+          refFreeBalance: expect.any(Number),
+          refTotalBalance: expect.any(Number),
+          totalBalance: expect.any(Number),
+        },
+        ETH: {
+          freeBalance: expect.any(Number),
+          refFreeBalance: expect.any(Number),
+          refTotalBalance: expect.any(Number),
+          totalBalance: expect.any(Number),
+        },
+        LINK: {
+          freeBalance: expect.any(Number),
+          refFreeBalance: expect.any(Number),
+          refTotalBalance: expect.any(Number),
+          totalBalance: expect.any(Number),
+        },
+        USDT: {
+          freeBalance: expect.any(Number),
+          refFreeBalance: expect.any(Number),
+          refTotalBalance: expect.any(Number),
+          totalBalance: expect.any(Number),
+        },
+      },
+      `
       {
         "DOT": {
-          "freeBalance": 544,
-          "refFreeBalance": 2051.810394293424,
-          "refTotalBalance": 2051.810394293424,
-          "totalBalance": 544,
+          "freeBalance": Any<Number>,
+          "refFreeBalance": Any<Number>,
+          "refTotalBalance": Any<Number>,
+          "totalBalance": Any<Number>,
         },
         "ETH": {
-          "freeBalance": 5.41,
-          "refFreeBalance": 8863.228919922138,
-          "refTotalBalance": 8863.228919922138,
-          "totalBalance": 5.41,
+          "freeBalance": Any<Number>,
+          "refFreeBalance": Any<Number>,
+          "refTotalBalance": Any<Number>,
+          "totalBalance": Any<Number>,
         },
         "LINK": {
-          "freeBalance": 579.5,
-          "refFreeBalance": 4358.816909307051,
-          "refTotalBalance": 4358.816909307051,
-          "totalBalance": 579.5,
+          "freeBalance": Any<Number>,
+          "refFreeBalance": Any<Number>,
+          "refTotalBalance": Any<Number>,
+          "totalBalance": Any<Number>,
         },
         "USDT": {
-          "freeBalance": 5885,
-          "refFreeBalance": 5860.824478241951,
-          "refTotalBalance": 5860.824478241951,
-          "totalBalance": 5885,
+          "freeBalance": Any<Number>,
+          "refFreeBalance": Any<Number>,
+          "refTotalBalance": Any<Number>,
+          "totalBalance": Any<Number>,
         },
       }
-    `);
+    `
+    );
   });
 });

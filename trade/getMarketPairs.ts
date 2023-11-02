@@ -5,7 +5,6 @@ export const executeMethod = async () => {
   const { api } = cedeSDK;
   const { getMarketPairs } = api;
 
-  // @TODO: update doc
   const data = await getMarketPairs({
     exchangeInstanceId,
   });

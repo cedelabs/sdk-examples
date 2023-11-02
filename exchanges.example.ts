@@ -1,4 +1,3 @@
-// @TODO: verify which exchanges need a password and update binance second key
 export const exchanges = {
   binance: {
     apiKey: "MY_API_PUBLIC_KEY",
