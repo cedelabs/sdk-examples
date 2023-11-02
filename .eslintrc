@@ -1,0 +1,23 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "@typescript-eslint/no-unnecessary-type-constraint": "error",
+    "@typescript-eslint/no-var-requires": "error",
+    "@typescript-eslint/no-duplicate-enum-values": "error",
+    "no-console": 0
+  },
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": ["!.scripts", "__mocks__"]
+}

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`registerExchangeInstance it should return exchange instance id 1`] = `
+{
+  "exchangeInstanceId": Any<String>,
+}
+`;

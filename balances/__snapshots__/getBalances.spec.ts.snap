@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getBalances it should return balances 1`] = `
+{
+  "data": {
+    "DOT": {
+      "freeBalance": Any<Number>,
+      "refFreeBalance": Any<Number>,
+      "refTotalBalance": Any<Number>,
+      "refUsedBalance": 0,
+      "spot": {
+        "freeBalance": Any<Number>,
+        "refFreeBalance": Any<Number>,
+        "refTotalBalance": Any<Number>,
+        "refUsedBalance": 0,
+        "totalBalance": Any<Number>,
+        "usedBalance": 0,
+      },
+      "totalBalance": Any<Number>,
+      "usedBalance": 0,
+    },
+    "ETH": {
+      "freeBalance": Any<Number>,
+      "refFreeBalance": Any<Number>,
+      "refTotalBalance": Any<Number>,
+      "refUsedBalance": 0,
+      "spot": {
+        "freeBalance": Any<Number>,
+        "refFreeBalance": Any<Number>,
+        "refTotalBalance": Any<Number>,
+        "refUsedBalance": 0,
+        "totalBalance": Any<Number>,
+        "usedBalance": 0,
+      },
+      "totalBalance": Any<Number>,
+      "usedBalance": 0,
+    },
+    "LINK": {
+      "freeBalance": Any<Number>,
+      "refFreeBalance": Any<Number>,
+      "refTotalBalance": Any<Number>,
+      "refUsedBalance": 0,
+      "spot": {
+        "freeBalance": Any<Number>,
+        "refFreeBalance": Any<Number>,
+        "refTotalBalance": Any<Number>,
+        "refUsedBalance": 0,
+        "totalBalance": Any<Number>,
+        "usedBalance": 0,
+      },
+      "totalBalance": Any<Number>,
+      "usedBalance": 0,
+    },
+    "USDT": {
+      "freeBalance": Any<Number>,
+      "refFreeBalance": Any<Number>,
+      "refTotalBalance": Any<Number>,
+      "refUsedBalance": 0,
+      "spot": {
+        "freeBalance": NaN,
+        "refFreeBalance": NaN,
+        "refTotalBalance": NaN,
+        "refUsedBalance": 0,
+        "totalBalance": NaN,
+        "usedBalance": 0,
+      },
+      "totalBalance": Any<Number>,
+      "usedBalance": 0,
+    },
+  },
+  "hydrate": false,
+  "key": Any<String>,
+}
+`;
