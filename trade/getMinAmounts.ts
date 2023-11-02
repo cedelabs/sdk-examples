@@ -3,16 +3,14 @@ import { cedeSDK, initExchange } from "../utils";
 export const executeMethod = async () => {
   const exchangeInstanceId = await initExchange();
   const { api } = cedeSDK;
-  const { getNetwork } = api;
+  const { getMinAmounts } = api;
 
-  const network = await getNetwork({
+  const data = await getMinAmounts({
     exchangeInstanceId,
-    tokenSymbol: "ETH",
-    network: "ETH",
-    opts: {
-      toDeposit: true,
-    },
+    pairSymbol: "ETH/USDT",
+		orderSide: "buy",
+		price: '1800'
   });
 
-  return network;
+  return data;
 };
