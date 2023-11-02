@@ -8,7 +8,7 @@
 export default {
   preset: "ts-jest",
   extensionsToTreatAsEsm: [".ts"],
-  setupFiles: ["./setupTests.ts", "dotenv/config"],
+  setupFiles: ["dotenv/config"],
   moduleNameMapper: {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
