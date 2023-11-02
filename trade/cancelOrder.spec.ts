@@ -12,10 +12,7 @@ describe("cancelOrder", () => {
   it("it should cancel order", async () => {
     const createOrderResult = await createOrder(exchangeInstanceId);
 
-    const result = await executeMethod(
-      createOrderResult.id,
-      exchangeInstanceId
-    );
+    const result = await executeMethod(createOrderResult.id, exchangeInstanceId);
 
     expect(result).toMatchInlineSnapshot(`"canceled"`);
   });

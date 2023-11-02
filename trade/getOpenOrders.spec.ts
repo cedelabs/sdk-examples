@@ -50,7 +50,7 @@ describe("getOpenOrders", () => {
           "type": "market",
         },
       ]
-    `
+    `,
     );
   });
 });

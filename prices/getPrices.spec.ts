@@ -9,6 +9,6 @@ describe("getPrices", () => {
   it("it should return token prices", async () => {
     const result = await executeMethod();
 
-    expect(result).toHaveProperty('ETH', expect.any(Number));
+    expect(result).toHaveProperty("ETH", expect.any(Number));
   });
 });

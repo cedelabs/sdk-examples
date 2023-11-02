@@ -101,7 +101,7 @@ describe("createWithdrawal", () => {
         },
         "type": "withdrawal",
       }
-    `
+    `,
     );
   });
 });

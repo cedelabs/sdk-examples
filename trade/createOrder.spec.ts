@@ -41,7 +41,7 @@ describe("createOrder", () => {
         "timestamp": Any<Number>,
         "type": "market",
       }
-    `
+    `,
     );
   });
 });

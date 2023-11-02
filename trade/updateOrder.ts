@@ -1,7 +1,7 @@
 import { cedeSDK, initExchange } from "../utils";
 
 export const executeMethod = async (orderId?: string, customExchangeInstanceId?: string) => {
-  const exchangeInstanceId = customExchangeInstanceId ?? await initExchange();
+  const exchangeInstanceId = customExchangeInstanceId ?? (await initExchange());
   const { updateOrder } = cedeSDK.api;
 
   const data = await updateOrder({

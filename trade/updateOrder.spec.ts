@@ -12,10 +12,7 @@ describe("updateOrder", () => {
   it("it should update order", async () => {
     const createOrderResult = await createOrder(exchangeInstanceId);
 
-    const result = await executeMethod(
-      createOrderResult.id,
-      exchangeInstanceId
-    );
+    const result = await executeMethod(createOrderResult.id, exchangeInstanceId);
 
     expect(result).toMatchInlineSnapshot(
       {
@@ -49,7 +46,7 @@ describe("updateOrder", () => {
         "timestamp": Any<Number>,
         "type": "market",
       }
-    `
+    `,
     );
   });
 });

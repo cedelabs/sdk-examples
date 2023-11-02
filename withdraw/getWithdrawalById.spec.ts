@@ -16,7 +16,7 @@ describe("getWithdrawalById", () => {
       exchangeInstanceId,
       createWithdrawResult.from.transaction.transactionId,
       createWithdrawResult.from.transaction.tokenSymbol,
-      createWithdrawResult.from.transaction.timestamp
+      createWithdrawResult.from.transaction.timestamp,
     );
 
     expect(result).toMatchInlineSnapshot(`undefined`);

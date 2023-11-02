@@ -39,7 +39,7 @@ describe("prepareOrder", () => {
           "tokenSymbol": "USDT",
         },
       }
-    `
+    `,
     );
   });
 });

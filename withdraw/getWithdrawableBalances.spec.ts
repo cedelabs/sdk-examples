@@ -63,7 +63,7 @@ describe("getWithdrawableBalances", () => {
           "totalBalance": Any<Number>,
         },
       }
-    `
+    `,
     );
   });
 });

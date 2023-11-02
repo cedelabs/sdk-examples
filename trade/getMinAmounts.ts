@@ -7,8 +7,8 @@ export const executeMethod = async () => {
   const data = await getMinAmounts({
     exchangeInstanceId,
     pairSymbol: "ETH/USDT",
-		orderSide: "buy",
-		price: '1800'
+    orderSide: "buy",
+    price: "1800",
   });
 
   return data;

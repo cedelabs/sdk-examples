@@ -19,7 +19,7 @@ describe("getMarketRate", () => {
         "ask": Any<String>,
         "bid": Any<String>,
       }
-    `
+    `,
     );
   });
 });
