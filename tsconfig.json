@@ -10,7 +10,6 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
-    "outDir": "dist",
     "allowJs": true
   },
   "ts-node": {

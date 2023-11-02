@@ -1,10 +1,3 @@
-/*
- * Copyright (C) CEDE Labs, SAS - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited
- * Proprietary and confidential
- * Written by CEDE Labs team <team@cedelabs.io>, September 2021
- */
-
 export default {
   preset: "ts-jest",
   extensionsToTreatAsEsm: [".ts"],
