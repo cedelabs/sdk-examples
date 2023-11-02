@@ -314,8 +314,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cedelabs/demo-sdk@../monorepo/core/sdk":
+"@cedelabs/demo-sdk@1.1.2":
   version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@cedelabs/demo-sdk/-/demo-sdk-1.1.2.tgz#508a4e67e4740d8f3285666b8f82d46d198d6431"
+  integrity sha512-SEf2c1eHQrQ+TJGL4gYjuTu+FBVxQNZic7khVrql4bZCbxrhzrFCR8zBied/4JZDewPjEO6iSyXDkVXdlmvskg==
   dependencies:
     async-mutex "^0.4.0"
     events "^3.3.0"
@@ -3297,6 +3299,11 @@ whatwg-encoding@^2.0.0:
   integrity sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==
   dependencies:
     iconv-lite "0.6.3"
+
+whatwg-fetch@^3.6.19:
+  version "3.6.19"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.19.tgz#caefd92ae630b91c07345537e67f8354db470973"
+  integrity sha512-d67JP4dHSbm2TrpFj8AbO8DnL1JXL5J9u0Kq2xW6d0TFDbCA3Muhdt8orXC22utleTVj7Prqt82baN6RBvnEgw==
 
 whatwg-mimetype@^3.0.0:
   version "3.0.0"
