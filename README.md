@@ -12,7 +12,7 @@ yarn
 
 First, install the private package @cedelabs/sdk. To obtain access, please contact the Cede Labs team:
 - [Discord](https://discord.com/invite/V7hgKf6NWf)
-- [Email](hello@cedelabs.io)
+- [Email](mailto:gabriel.begazo@cedelabs.io)
 
 If you want to add a CEX, copy paste the `exchanges.example.ts` file to the `exchanges.ts` file and fill in the CEX credentials.
 
