@@ -1,3 +1,5 @@
+import * as prettyjson from "prettyjson";
+
 console.log(process.argv[3]);
 
 (async () => {
@@ -6,5 +8,5 @@ console.log(process.argv[3]);
   const { executeMethod } = await import(process.argv[3]);
   const result = await executeMethod();
 
-  console.log(result);
+  console.log(prettyjson.render(result));
 })();
