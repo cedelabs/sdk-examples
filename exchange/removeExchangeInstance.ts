@@ -1,4 +1,4 @@
-import { exchanges } from "../exchange";
+import { exchanges } from "../exchanges";
 import { cedeSDK } from "../utils";
 
 export const executeMethod = async () => {
