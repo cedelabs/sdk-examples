@@ -10,7 +10,11 @@ yarn
 
 ## Usage with a real CEX
 
-If you want to add a CEX, copy paste the `exchange.example.ts` file to the `exchange.ts` file and fill in the CEX credentials.
+First, install the private package @cedelabs/sdk. To obtain access, please contact the Cede Labs team:
+- [Discord](https://discord.com/invite/V7hgKf6NWf)
+- [Email](hello@cedelabs.io)
+
+If you want to add a CEX, copy paste the `exchanges.example.ts` file to the `exchanges.ts` file and fill in the CEX credentials.
 
 And then change the `SELECTED_CEX` entry inside the `.env` file so every commands will run using the CEX you need.
 
