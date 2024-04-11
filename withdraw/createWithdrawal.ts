@@ -9,7 +9,7 @@ export const executeMethod = async (customExchangeInstanceId?: string) => {
     tokenSymbol: "USDT",
     amount: 12,
     address: "0x123456789",
-    internalNetwork: "avacchain",
+    network: "avacchain",
   });
 
   return data;

@@ -7,7 +7,7 @@ export const executeMethod = async () => {
   const balances = await getDepositAddress({
     exchangeInstanceId,
     tokenSymbol: "ETH",
-    internalNetwork: "ETH",
+    network: "ETH",
   });
 
   return balances;

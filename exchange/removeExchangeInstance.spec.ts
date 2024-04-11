@@ -1,5 +1,5 @@
 import { initExchange } from "../utils";
-import { executeMethod } from "./removeExchangeInstance";
+import { executeMethod } from "./isRegistered";
 
 describe("removeExchangeInstance", () => {
   beforeAll(async () => {
