@@ -34,7 +34,7 @@ prices, trade, withdraw.
 You can use the `yarn execute` commande to execute any command:
 
 ```js
-yarn execute ./deposit/getDepositabletokens
+yarn execute ./deposit/getDepositableTokens
 
 // [
 //   { tokenSymbol: 'ETH', networks: [ [Object] ] },
