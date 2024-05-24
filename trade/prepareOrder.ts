@@ -1,4 +1,4 @@
-import { OrderType } from "@cedelabs/sdk";
+import { OrderType } from "@cedelabs/demo-sdk";
 import { cedeSDK, initExchange } from "../utils";
 
 export const executeMethod = async () => {

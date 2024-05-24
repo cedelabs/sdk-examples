@@ -6,7 +6,9 @@ const SELECTED_EXCHANGE = "bybit";
 
 const clientId = "sdk-***"; // update with your clientId if using with "REAL" SDK_MODE
 
-export const cedeSDK = new CedeSDK(SDK_MODE ?? "MOCK");
+export const cedeSDK = new CedeSDK(SDK_MODE ?? "MOCK", {
+  clientId,
+});
 
 export const initExchange = async (specificExchange = "coinbase") => {
   const selectedExchange = SELECTED_EXCHANGE ?? specificExchange;

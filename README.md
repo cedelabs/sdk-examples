@@ -107,7 +107,7 @@ content of the `executeMethod` function.
 
 ## Usage with a real CEX
 
-First, install the private package @cedelabs/sdk. To obtain access, please contact the Cede Labs team:
+First, install the private package @cedelabs-private/sdk. To obtain access, please contact the Cede Labs team:
 
 - [Discord](https://discord.com/invite/V7hgKf6NWf)
 - [Email](mailto:gabriel.begazo@cedelabs.io)
