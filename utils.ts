@@ -1,9 +1,12 @@
 import CedeSDK from "@cedelabs/demo-sdk";
 import { exchanges } from "./exchanges";
 
-const { CEDE_MODE, SELECTED_EXCHANGE } = process.env;
+const SDK_MODE = "MOCK";
+const SELECTED_EXCHANGE = "bybit";
 
-export const cedeSDK = new CedeSDK(CEDE_MODE ?? "MOCK");
+const clientId = "sdk-***"; // update with your clientId if using with "REAL" SDK_MODE
+
+export const cedeSDK = new CedeSDK(SDK_MODE ?? "MOCK");
 
 export const initExchange = async (specificExchange = "coinbase") => {
   const selectedExchange = SELECTED_EXCHANGE ?? specificExchange;

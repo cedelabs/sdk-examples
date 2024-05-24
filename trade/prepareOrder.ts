@@ -1,4 +1,4 @@
-import { OrderType } from "@cedelabs/demo-sdk";
+import { OrderType } from "@cedelabs/sdk";
 import { cedeSDK, initExchange } from "../utils";
 
 export const executeMethod = async () => {
@@ -10,7 +10,7 @@ export const executeMethod = async () => {
     pairSymbol: "ETH/USDT",
     orderType: OrderType.MARKET,
     orderSide: "buy",
-    price: "0.1",
+    price: "3103.7",
     amount: "0.1",
   });
 
