@@ -8,7 +8,6 @@ export const executeMethod = async () => {
     fromExchangeInstanceId: exchangeInstanceId,
     tokenSymbol: "AVAX",
     amount: 1,
-    address: "0x123456789",
     network: "avacchain",
   });
 

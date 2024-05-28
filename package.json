@@ -4,8 +4,6 @@
   "license": "MIT",
   "scripts": {
     "execute": "ts-node -r dotenv/config ./execute -- ",
-    "test:node": "NODE_OPTIONS=--experimental-vm-modules TEST_ENV=node jest --passWithNoTests",
-    "test:dom": "NODE_OPTIONS=--experimental-vm-modules TEST_ENV=jsdom jest --passWithNoTests",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
   "type": "module",

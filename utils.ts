@@ -2,7 +2,7 @@ import CedeSDK from "@cedelabs/demo-sdk";
 import { exchanges } from "./exchanges";
 
 const SDK_MODE = "MOCK";
-const SELECTED_EXCHANGE = "bybit";
+const SELECTED_EXCHANGE = process.env.SELECTED_EXCHANGE;
 
 const clientId = "sdk-***"; // update with your clientId if using with "REAL" SDK_MODE
 
