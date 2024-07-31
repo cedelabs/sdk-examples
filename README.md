@@ -20,10 +20,12 @@ git clone https://github.com/cedelabs/sdk-examples
 yarn
 ```
 
+Copy & paste the `exchanges.example.ts` file to the `exchanges.ts`.
+
 If you want to install the demo version of the SDK in your project, run:
 
 ```
-yarn i @cedelabs/demo-sdk
+yarn add @cedelabs/demo-sdk
 ```
 
 ## Commands
