@@ -6,8 +6,8 @@ export const executeMethod = async () => {
 
   const balances = await getDepositAddress({
     exchangeInstanceId,
-    tokenSymbol: "ETH",
-    network: "ETH",
+    tokenSymbol: "USDT",
+    network: "ethereum",
   });
 
   return balances;
