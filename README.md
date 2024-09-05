@@ -17,16 +17,21 @@ find numerous available features.
 
 ```
 git clone https://github.com/cedelabs/sdk-examples
+cd sdk-examples
 yarn
 ```
 
-Copy & paste the `exchanges.example.ts` file to the `exchanges.ts`.
+You can specify the exchange you want to use in `config.ts`.
 
-If you want to install the demo version of the SDK in your project, run:
+In the public version of the SDK, exchanges are mocked. You don't need to provide API keys to test or start the
+integration.
 
-```
-yarn add @cedelabs/demo-sdk
-```
+Once you're ready to integrate with real exchanges, you'll need to do the following:
+
+1. We'll provide you with the clientId to include in `config.ts`.
+2. You'll need to copy and paste the `exchanges.example.ts` file to `exchanges.ts` with your API keys.
+3. Install the private `@cedelabs-private/sdk` package and replace the `"@cedelabs/demo-sdk"` imports with
+   `"@cedelabs-private/sdk"`.
 
 ## Commands
 
