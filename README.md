@@ -107,6 +107,14 @@ refreshToken). If you're in "MOCK" mode, providing keys is not necessary.
 | open orders           | `yarn execute ./trade/getOpenOrders`  | Lists all open orders.                                                                                               |
 | retrieve an order     | `yarn execute ./trade/getOrder`       | Retrieves an order.                                                                                                  |
 
+### Sub Accounts
+
+| Feature                                 | Command                                            | Description                                                         |
+| --------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------- |
+| list sub-accounts                       | `yarn execute ./subAccounts/getSubAccounts`        | Provides a list of available sub-accounts.                          |
+| retrieve sub-account balance            | `yarn execute ./subAccounts/getSubAccountBalances` | Provides balances of a given sub-account.                           |
+| transfer between master and sub-account | `yarn execute ./subAccounts/subAccountTransfer`    | Transfers from master to sub-account or from sub-account to master. |
+
 ## Tests
 
 The tests actually rely on the mocked coinbase CEX using the demo package and can fail in case you change the CEX or the
