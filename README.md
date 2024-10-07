@@ -30,7 +30,7 @@ Once you're ready to integrate with real exchanges, you'll need to do the follow
 
 1. We'll provide you with the clientId to include in `config.ts`.
 2. You'll need to copy and paste the `exchanges.example.ts` file to `exchanges.ts` with your API keys.
-3. Install the private `@cedelabs-private/sdk` package and replace the `"@cedelabs/demo-sdk"` imports with
+3. Install the private `@cedelabs-private/sdk` package and replace the `"@cedelabs/demo-sdk"` in `./sdk.ts` with
    `"@cedelabs-private/sdk"`.
 
 ## Commands
@@ -38,82 +38,79 @@ Once you're ready to integrate with real exchanges, you'll need to do the follow
 Each command file is located inside the corresponding use case folder: authentication, balances, deposit, exchange,
 prices, trade, withdraw.
 
-You can use the `yarn execute` commande to execute any command:
+You can use the `yarn start` command to launch the CLI.
 
 ```js
-yarn execute ./deposit/getDepositableTokens
-
-// [
-//   { tokenSymbol: 'ETH', networks: [ [Object] ] },
-//   { tokenSymbol: 'MATIC', networks: [ [Object] ] }
-// ]
+yarn execute
 ```
+
+Then, follow the menu to execute any method, switch the mode, or change the exchange.
 
 ## Features
 
 You will find supported features in the tables below. For more detailed documentation, please visit
-https://sdk.cede.store/documentation/general-info.
+https://docs-sdk.cede.store/documentation/general-info.
 
 ### Authentication
 
 To authenticate your requests, you need to register an exchange instance and provide credentials for future requests.
 You can register it using either an API key pair (apiKey and secretKey) or an OAuth key pair (accessToken and
-refreshToken). If you're in "MOCK" mode, providing keys is not necessary.
+refreshToken). If you're in "demo" mode, providing keys is not necessary.
 
-| Feature              | Command                                            | Description                                                                                                                          |
-| -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| register an exchange | `yarn execute ./exchange/registerExchangeInstance` | Creates an exchange instance with the provided credentials (API keys or OAuth tokens).                                               |
-| remove an exchange   | `yarn execute ./exchange/removeExchangeInstance`   | Removes an exchange instance, deleting API keys from memory, revoking OAuth tokens, etc.                                             |
-| exchange registered  | `yarn execute ./exchange/isRegistered`             | Checks if the exchange instance is already registered.                                                                               |
-| OAuth URL            | `yarn execute ./exchange/getOAuthUrl`              | Provides the URL of the exchange to initiate the OAuth flow. After redirection, you will be able to retrieve the authorization code. |
-| Get OAuth tokens     | `yarn execute ./exchange/getOAuthTokens`           | After obtaining the authorization code, call this method to retrieve the access and refresh tokens.                                  |
+| Feature              | Method                     | Description                                                                                                                          |
+| -------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| register an exchange | `registerExchangeInstance` | Creates an exchange instance with the provided credentials (API keys or OAuth tokens).                                               |
+| remove an exchange   | `removeExchangeInstance`   | Removes an exchange instance, deleting API keys from memory, revoking OAuth tokens, etc.                                             |
+| exchange registered  | `isRegistered`             | Checks if the exchange instance is already registered.                                                                               |
+| OAuth URL            | `getOAuthUrl`              | Provides the URL of the exchange to initiate the OAuth flow. After redirection, you will be able to retrieve the authorization code. |
+| Get OAuth tokens     | `getOAuthTokens`           | After obtaining the authorization code, call this method to retrieve the access and refresh tokens.                                  |
 
 ### Balances and other data
 
-| Feature             | Command                                         | Description                                                                                                                         |
-| ------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| balances            | `yarn execute ./balances/getBalances`           | Provides balances by wallet type (spot, futures, margin, etc.). You can find the supported wallet types in `getSupportedExchanges`. |
-| prices              | `yarn execute ./prices/getPrices`               | Provides prices in USD for all tokens supported by the SDK.                                                                         |
-| supported exchanges | `yarn execute ./exchange/getSupportedExchanges` | Lists all supported exchanges along with their metadata.                                                                            |
+| Feature             | Method                  | Description                                                                                                                         |
+| ------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| balances            | `getBalances`           | Provides balances by wallet type (spot, futures, margin, etc.). You can find the supported wallet types in `getSupportedExchanges`. |
+| prices              | `getPrices`             | Provides prices in USD for all tokens supported by the SDK.                                                                         |
+| supported exchanges | `getSupportedExchanges` | Lists all supported exchanges along with their metadata.                                                                            |
 
 ### Withdrawal use case
 
-| Feature               | Command                                           | Description                                                                                                                                                      |
-| --------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| withdrawal networks   | `yarn execute ./withdraw/getWithdrawableNetworks` | Provides a list of networks available for withdrawing a specific token on a given exchange.                                                                      |
-| withdrawable tokens   | `yarn execute ./withdraw/getWithdrawableBalances` | Provides balances of tokens available for withdrawal from one or more wallet types.                                                                              |
-| prepare a withdrawal  | `yarn execute ./withdraw/prepareWithdrawal`       | Prepares a withdrawal. More info: https://sdk.cede.store/documentation/api-reference/withdraw#prepare-withdrawal                                                 |
-| create a withdrawal   | `yarn execute ./withdraw/createWithdrawal`        | Sends a withdrawal request to the exchange. If more than one wallet type is used, the SDK executes an internal transfer to have enough funds for the withdrawal. |
-| retrieve a withdrawal | `yarn execute ./withdraw/getWithdrawalById`       | Retrieves a withdrawal.                                                                                                                                          |
+| Feature               | Method                    | Description                                                                                                                                                      |
+| --------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| withdrawal networks   | `getWithdrawableNetworks` | Provides a list of networks available for withdrawing a specific token on a given exchange.                                                                      |
+| withdrawable tokens   | `getWithdrawableBalances` | Provides balances of tokens available for withdrawal from one or more wallet types.                                                                              |
+| prepare a withdrawal  | `prepareWithdrawal`       | Prepares a withdrawal. More info: https://sdk.cede.store/documentation/api-reference/withdraw#prepare-withdrawal                                                 |
+| create a withdrawal   | `createWithdrawal`        | Sends a withdrawal request to the exchange. If more than one wallet type is used, the SDK executes an internal transfer to have enough funds for the withdrawal. |
+| retrieve a withdrawal | `getWithdrawalById`       | Retrieves a withdrawal.                                                                                                                                          |
 
 ### Deposit use case
 
-| Feature            | Command                                       | Description                                                                                |
-| ------------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| deposit networks   | `yarn execute ./deposit/getNetworks`          | Provides a list of networks available for depositing a specific token on a given exchange. |
-| depositable tokens | `yarn execute ./deposit/getDepositableTokens` | Provides a list of tokens available for deposit on a given exchange.                       |
-| deposit address    | `yarn execute ./deposit/getDepositAddress`    | Retrieves the deposit address for a specific token and network on a given exchange.        |
+| Feature            | Method                 | Description                                                                                |
+| ------------------ | ---------------------- | ------------------------------------------------------------------------------------------ |
+| deposit networks   | `getNetworks`          | Provides a list of networks available for depositing a specific token on a given exchange. |
+| depositable tokens | `getDepositableTokens` | Provides a list of tokens available for deposit on a given exchange.                       |
+| deposit address    | `getDepositAddress`    | Retrieves the deposit address for a specific token and network on a given exchange.        |
 
 ### Trade use case
 
-| Feature               | Command                               | Description                                                                                                          |
-| --------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| market pairs          | `yarn execute ./trade/getMarketPairs` | Provides a list of existing market pairs.                                                                            |
-| market rate           | `yarn execute ./trade/getMarketRate`  | Provides the best buy and sell prices from the order book, useful for estimating `amountOut`.                        |
-| minimum trade amounts | `yarn execute ./trade/getMinAmounts`  | Provides minimum trade amounts.                                                                                      |
-| prepare an order      | `yarn execute ./trade/prepareOrder`   | Estimates the exchange fee and the amount to be received. Provides the object to pass to the `createOrder` function. |
-| create an order       | `yarn execute ./trade/createOrder`    | Send an order to the exchange.                                                                                       |
-| update an order       | `yarn execute ./trade/updateOrder`    | Updates the open order (type, side, amount, price).                                                                  |
-| open orders           | `yarn execute ./trade/getOpenOrders`  | Lists all open orders.                                                                                               |
-| retrieve an order     | `yarn execute ./trade/getOrder`       | Retrieves an order.                                                                                                  |
+| Feature               | Method           | Description                                                                                                          |
+| --------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| market pairs          | `getMarketPairs` | Provides a list of existing market pairs.                                                                            |
+| market rate           | `getMarketRate`  | Provides the best buy and sell prices from the order book, useful for estimating `amountOut`.                        |
+| minimum trade amounts | `getMinAmounts`  | Provides minimum trade amounts.                                                                                      |
+| prepare an order      | `prepareOrder`   | Estimates the exchange fee and the amount to be received. Provides the object to pass to the `createOrder` function. |
+| create an order       | `createOrder`    | Send an order to the exchange.                                                                                       |
+| update an order       | `updateOrder`    | Updates the open order (type, side, amount, price).                                                                  |
+| open orders           | `getOpenOrders`  | Lists all open orders.                                                                                               |
+| retrieve an order     | `getOrder`       | Retrieves an order.                                                                                                  |
 
 ### Sub Accounts
 
-| Feature                                 | Command                                            | Description                                                         |
-| --------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------- |
-| list sub-accounts                       | `yarn execute ./subAccounts/getSubAccounts`        | Provides a list of available sub-accounts.                          |
-| retrieve sub-account balance            | `yarn execute ./subAccounts/getSubAccountBalances` | Provides balances of a given sub-account.                           |
-| transfer between master and sub-account | `yarn execute ./subAccounts/subAccountTransfer`    | Transfers from master to sub-account or from sub-account to master. |
+| Feature                                 | Method                  | Description                                                         |
+| --------------------------------------- | ----------------------- | ------------------------------------------------------------------- |
+| list sub-accounts                       | `getSubAccounts`        | Provides a list of available sub-accounts.                          |
+| retrieve sub-account balance            | `getSubAccountBalances` | Provides balances of a given sub-account.                           |
+| transfer between master and sub-account | `subAccountTransfer`    | Transfers from master to sub-account or from sub-account to master. |
 
 ## Tests
 
@@ -129,7 +126,5 @@ First, install the private package @cedelabs-private/sdk. To obtain access, plea
 
 If you want to add a CEX, copy paste the `exchanges.example.ts` file to the `exchanges.ts` file and fill in the CEX
 credentials.
-
-And then change the `SELECTED_CEX` entry inside the `.env` file so every commands will run using the CEX you need.
 
 Then link the local `sdk` package with to this project.
