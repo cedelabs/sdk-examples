@@ -1,8 +1,11 @@
 import chalk from "chalk";
+import open from "open";
 import { createInterface } from "readline";
 import { CONFIG } from "./config";
 import { executeMethod, getAvailableMethods } from "./executeMethod";
 import { initializeSDK, SdkConfig } from "./initialize";
+
+const PLAYGROUND_GITHUB_REPO = "https://github.com/cedelabs/sdk-examples";
 
 export const sdkConfig: SdkConfig = {
   selectedMode: CONFIG.SDK_MODE,
@@ -28,7 +31,8 @@ function showMenu() {
     3. Switch mode (type 'mode [demo|real]')
     3. Change an exchange (type 'exchange [setting]')
     4. See available exchanges (type 'exchanges')
-    5. Exit (type 'exit')
+    5. More details (type 'help')
+    6. Exit (type 'exit')
     `);
   rl.prompt();
 }
@@ -119,6 +123,15 @@ rl.on("line", async (line) => {
       Object.entries(methods).forEach(([folder, files]) => {
         console.log(`  ${folder}:`);
         files.forEach((file) => console.log(`    - ${file}`));
+      });
+      showMenu();
+      break;
+    }
+    case "help": {
+      console.log(`  Opening ${PLAYGROUND_GITHUB_REPO}...`);
+      open(PLAYGROUND_GITHUB_REPO).catch(() => {
+        console.log(`  Failed to open your browser.\n`);
+        console.log(`  Please, visit ${PLAYGROUND_GITHUB_REPO} for more details.`);
       });
       showMenu();
       break;

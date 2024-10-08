@@ -31,6 +31,7 @@ yarn start
 EOF
 
 chmod +x "$BIN_DIR/$EXECUTABLE_NAME"
+chmod +x "$INSTALL_DIR/switchToProd.sh"
 
 echo "export PLAYGROUND_SDK_DIR=\"$INSTALL_DIR\"" >> "$HOME/.bashrc"
 

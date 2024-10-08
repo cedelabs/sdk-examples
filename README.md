@@ -7,7 +7,7 @@
 </p>
 
 Cede SDK is a centralized exchange (CEX) connectivity solution that unifies access to multiple CEX APIs. At present, we
-support connections to over 10 CEXs using both API keys and OAuth. This SDK enables B2B stakeholders to effortlessly
+support connections to 15 CEXs using both API keys and OAuth. This SDK enables B2B stakeholders to effortlessly
 incorporate features like account balances, withdrawals, transaction histories, trades, and public data.
 
 This repository demonstrates the API of this SDK in sandbox mode (exchange API keys are not required). Below, you will
@@ -15,23 +15,37 @@ find numerous available features.
 
 ## Installation
 
-```
-git clone https://github.com/cedelabs/sdk-examples
-cd sdk-examples
-yarn
-```
+**I. Demo** - If you want to try the SDK without having the `clientId`, you can install it with a single command:
 
-You can specify the exchange you want to use in `config.ts`.
+```
+curl -sSL https://github.com/cedelabs/sdk-examples/blob/master/install.sh | bash
+```
 
 In the public version of the SDK, exchanges are mocked. You don't need to provide API keys to test or start the
 integration.
 
-Once you're ready to integrate with real exchanges, you'll need to do the following:
+**II. Production** - If you have the `clientId` and wish to interact with real exchange APIs, follow these steps:
 
-1. We'll provide you with the clientId to include in `config.ts`.
-2. You'll need to copy and paste the `exchanges.example.ts` file to `exchanges.ts` with your API keys.
-3. Install the private `@cedelabs-private/sdk` package and replace the `"@cedelabs/demo-sdk"` in `./sdk.ts` with
-   `"@cedelabs-private/sdk"`.
+1. Install the playground and the SDK:
+
+```
+git clone https://github.com/cedelabs/sdk-examples
+cd sdk-examples
+yarn
+./switchToProd.sh
+```
+
+2. You'll also need to copy and paste the `exchanges.example.ts` file to `exchanges.ts` with your API keys.
+
+3. You can specify the exchange and the `clientId` you want to use in `config.ts` or directly in CLI.
+
+In the public version of the SDK, exchanges are mocked. You don't need to provide API keys to test or start the
+integration.
+
+If `./switchToProd.sh` didn't work, you can install manually the production SDK by doing the following:
+
+- Install the private `@cedelabs-private/sdk` package
+- Replace the `"@cedelabs/demo-sdk"` in `./sdk.ts` with `"@cedelabs-private/sdk"`.
 
 ## Commands
 
@@ -41,7 +55,7 @@ prices, trade, withdraw.
 You can use the `yarn start` command to launch the CLI.
 
 ```js
-yarn execute
+yarn start
 ```
 
 Then, follow the menu to execute any method, switch the mode, or change the exchange.
