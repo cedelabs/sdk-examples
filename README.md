@@ -18,7 +18,7 @@ find numerous available features.
 **I. Demo** - If you want to try the SDK without having the `clientId`, you can install it with a single command:
 
 ```
-curl -sSL https://github.com/cedelabs/sdk-examples/blob/master/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/cedelabs/sdk-examples/refs/heads/master/install.sh | bash
 ```
 
 In the public version of the SDK, exchanges are mocked. You don't need to provide API keys to test or start the
