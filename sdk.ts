@@ -1,2 +1,2 @@
-import CedeSDK from "@cedelabs-private/sdk";
+import CedeSDK from "@cedelabs/demo-sdk";
 export default CedeSDK;

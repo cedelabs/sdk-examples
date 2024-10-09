@@ -35,7 +35,7 @@ export const initializeSDK = async (mode = "demo", config: SdkConfig, clientId?:
         (exchange) => !supportedExchanges.includes(exchange),
       );
       if (unsupportedExchanges.length) {
-        throw new Error(`Unsupported exchanges found: ${unsupportedExchanges.join(", ")}`);
+        console.log(`  Unsupported exchanges found: ${unsupportedExchanges.join(", ")}`);
       }
 
       const result = await Promise.allSettled(

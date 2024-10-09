@@ -1,10 +1,12 @@
 import chalk from "chalk";
+import fs from "fs";
 import open from "open";
+import path from "path";
 import { createInterface } from "readline";
+import { fileURLToPath } from "url";
 import { CONFIG } from "./config";
 import { executeMethod, getAvailableMethods } from "./executeMethod";
 import { initializeSDK, SdkConfig } from "./initialize";
-
 const PLAYGROUND_GITHUB_REPO = "https://github.com/cedelabs/sdk-examples";
 
 export const sdkConfig: SdkConfig = {
@@ -22,6 +24,19 @@ export const rl = createInterface({
   output: process.stdout,
   prompt: getPrompt(),
 });
+
+function ensurePrivateSdkInstalled() {
+  const __filename = fileURLToPath(import.meta.url);
+  const sdkFile = fs.readFileSync(path.join(path.dirname(__filename), "sdk.ts"), "utf-8");
+  if (!sdkFile.includes("@cedelabs-private/sdk")) {
+    console.log(
+      "  Private SDK is not available. Please run ./switchToProd.sh or install the package @cedelabs-private/sdk manually (check README.md).",
+    );
+    return false;
+  }
+
+  return true;
+}
 
 function showMenu() {
   console.log(`
@@ -47,6 +62,14 @@ rl.on("line", async (line) => {
       if (args[0] === "demo" || args[0] === "real") {
         if (sdkConfig.selectedMode === args[0]) {
           console.log(`  Already in ${args[0]} mode.`);
+          showMenu();
+          break;
+        }
+
+        // check if private sdk is available
+        // read ./sdk file and make sure there's an import from package @cedelabs-private/sdk
+        const installed = ensurePrivateSdkInstalled();
+        if (!installed) {
           showMenu();
           break;
         }
@@ -143,4 +166,10 @@ rl.on("line", async (line) => {
 });
 
 console.log("  Initializing...");
+if (CONFIG.SDK_MODE === "real") {
+  const installed = ensurePrivateSdkInstalled();
+  if (!installed) {
+    process.exit(1);
+  }
+}
 initializeSDK(CONFIG.SDK_MODE, sdkConfig, CONFIG.CLIENT_ID).then(showMenu);
