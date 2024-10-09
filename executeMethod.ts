@@ -1,9 +1,9 @@
+import { Any } from "@cedelabs/demo-sdk";
 import fs from "fs";
 import path from "path";
 import * as prettyjson from "prettyjson";
 import { fileURLToPath } from "url";
 import CedeSDK from "./sdk";
-import { Any } from "@cedelabs/demo-sdk";
 export type ExecuteMethodParams = {
   cedeSDK: CedeSDK;
   exchangeInstanceId: string;
@@ -50,13 +50,19 @@ export async function executeMethod(methodName: string, cedeSDK: CedeSDK, select
 
   console.log(`  Executing...`);
 
-  const { executeMethod }: { executeMethod: ExecuteMethod } = await import(methodPath);
+  const { executeMethod }: { executeMethod: ExecuteMethod } = await import(methodPath + `?update=${Date.now()}`);
 
-  const result = await executeMethod({
-    cedeSDK,
-    exchangeInstanceId: selectedExchange,
-    exchangeId: selectedExchange,
-  });
+  let result: Any;
+  try {
+    result = await executeMethod({
+      cedeSDK,
+      exchangeInstanceId: selectedExchange,
+      exchangeId: selectedExchange,
+    });
+  } catch (e: Any) {
+    console.log("  Error:", e);
+    return;
+  }
 
   console.log(prettyjson.render(result));
 }

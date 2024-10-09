@@ -143,4 +143,4 @@ rl.on("line", async (line) => {
 });
 
 console.log("  Initializing...");
-initializeSDK("demo", sdkConfig, CONFIG.CLIENT_ID).then(showMenu);
+initializeSDK(CONFIG.SDK_MODE, sdkConfig, CONFIG.CLIENT_ID).then(showMenu);
