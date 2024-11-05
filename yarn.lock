@@ -314,10 +314,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cedelabs/demo-sdk@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@cedelabs/demo-sdk/-/demo-sdk-1.14.0.tgz#467c516bb08a5fb4eb2b07372f4c3847ff026445"
-  integrity sha512-GgGnvNSx6wSGlGPNJ4a9O1Wqcci/SGkqfiDPLTJi5cioSBXZhWVHoCZQ16WUc8DuZTdNc42E1o892OtNEPiphg==
+"@cedelabs/demo-sdk@^1.16.0":
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/@cedelabs/demo-sdk/-/demo-sdk-1.16.0.tgz#d1a52ed80d65250759bee5d757e08b1bbb261efa"
+  integrity sha512-ttojSwXzDfyPFJr4YjcDHYXio1Kv+z4B3XEidManmF7UldsVnjmHnQ+rtgJ6JuyEdH2DbcZM+W1V7ZuhnV0VUA==
   dependencies:
     async-mutex "^0.4.0"
     events "^3.3.0"
