@@ -18,6 +18,7 @@ export const initializeSDK = async (mode = "demo", config: SdkConfig, clientId?:
 
   const cedeSDK = new CedeSDK(mode === "demo" ? "MOCK" : "REAL", {
     clientId: clientId ?? "sdk-***",
+    exchangeManagement: "stateful", // @todo migrate to the "stateless" mode, which is the default
   });
 
   const supportedExchanges = (await cedeSDK.api.getSupportedExchanges()).map((exchange) => exchange.id);
