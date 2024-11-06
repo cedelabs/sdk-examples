@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://sdk.cede.store/_next/static/media/sdk_banner.c901be80.svg" alt="CEDE">
+  <img src="https://sdk.cede.store/sdk-banner.svg" alt="Cede SDK">
 </p>
 
 Cede SDK is a centralized exchange (CEX) connectivity solution that unifies access to multiple CEX APIs. At present, we
