@@ -6,9 +6,7 @@
   <img src="https://sdk.cede.store/sdk-banner.svg" alt="Cede SDK">
 </p>
 
-Cede SDK is a centralized exchange (CEX) connectivity solution that unifies access to multiple CEX APIs. At present, we
-support connections to 15 CEXs using both API keys and OAuth. This SDK enables B2B stakeholders to effortlessly
-incorporate features like account balances, withdrawals, transaction histories, trades, and public data.
+Cede SDK is a centralized exchange (CEX) connectivity solution that unifies access to multiple CEX APIs. At present, we support connections to 15 CEXs. This SDK enables B2B stakeholders to effortlessly incorporate features like account balances, withdrawals, sub account transfers, trades, and public data.
 
 The Cede CLI is a developer tool to help you build, test, and manage your integration with CEXs through Cede SDK directly from the command line.
 
