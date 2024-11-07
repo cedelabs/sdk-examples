@@ -26,8 +26,8 @@ integration.
 1. Install the playground and the SDK:
 
 ```
-git clone https://github.com/cedelabs/sdk-examples
-cd sdk-examples
+git clone https://github.com/cedelabs/sdk-cli
+cd sdk-cli
 yarn
 ./switchToProd.sh
 ```
