@@ -4,8 +4,8 @@ export const exchanges = {
     secretKey: "MY_API_PRIVATE_KEY",
   },
   coinbase: {
-    accessToken: undefined,
-    refreshToken: undefined,
+    apiKey: "MY_API_PUBLIC_KEY",
+    secretKey: "MY_API_PRIVATE_KEY",
   },
   kraken: {
     apiKey: "MY_API_PUBLIC_KEY",
@@ -32,8 +32,8 @@ export const exchanges = {
     secretKey: "MY_API_PRIVATE_KEY",
   },
   bybit: {
-    accessToken: undefined,
-    refreshToken: undefined,
+    apiKey: "MY_API_PUBLIC_KEY",
+    secretKey: "MY_API_PRIVATE_KEY",
   },
   bitget: {
     apiKey: "MY_API_PUBLIC_KEY",
